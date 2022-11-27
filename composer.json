@@ -52,7 +52,7 @@
                 "JalalLinuX\\Setting\\SettingServiceProvider"
             ],
             "aliases": {
-                "Shinobi": "JalalLinuX\\Setting\\Facades\\Setting"
+                "Setting": "JalalLinuX\\Setting\\Facades\\Setting"
             }
         }
     },
