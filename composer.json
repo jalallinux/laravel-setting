@@ -46,6 +46,16 @@
             "pestphp/pest-plugin": true
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JalalLinuX\\Setting\\SettingServiceProvider"
+            ],
+            "aliases": {
+                "Shinobi": "JalalLinuX\\Setting\\Facades\\Setting"
+            }
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
