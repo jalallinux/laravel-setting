@@ -1,16 +1,16 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "jalallinux/laravel-setting",
+    "description": "Use jalallinux/laravel-settings to store key value pair settings in the database.",
     "keywords": [
-        ":vendor_name",
-        ":package_slug"
+        "jalallinux",
+        "laravel-setting"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/jalallinux/laravel-setting",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "JalalLinuX",
+            "email": "smjjalalzadeh93@gmail.com",
             "role": "Developer"
         }
     ],
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "JalalLinuX\\Setting\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "JalalLinuX\\Setting\\Tests\\": "tests"
         }
     },
     "scripts": {

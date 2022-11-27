@@ -1,23 +1,23 @@
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![Tests](https://github.com/:vendor_slug/:package_slug/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/:vendor_slug/:package_slug/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/jalallinux/laravel-setting.svg?style=flat-square)](https://packagist.org/packages/jalallinux/laravel-setting)
+[![Tests](https://github.com/jalallinux/laravel-setting/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/jalallinux/laravel-setting/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/jalallinux/laravel-setting.svg?style=flat-square)](https://packagist.org/packages/jalallinux/laravel-setting)
 <!--delete-->
 ---
-:package_description
+Use jalallinux/laravel-settings to store key value pair settings in the database.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require jalallinux/laravel-setting
 ```
 
 ## Usage
 
 ```php
-$skeleton = new VendorName\Skeleton();
-echo $skeleton->echoPhrase('Hello, VendorName!');
+$skeleton = new JalalLinuX\Setting();
+echo $skeleton->echoPhrase('Hello, JalalLinuX!');
 ```
 
 ## Testing
@@ -36,7 +36,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [JalalLinuX](https://github.com/jalallinux)
 - [All Contributors](../../contributors)
 
 ## License
