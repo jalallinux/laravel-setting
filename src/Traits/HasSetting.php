@@ -12,10 +12,12 @@ trait HasSetting
 {
     /**
      * Set setting for model
-     * @param string $key
-     * @param string $group
+     *
+     * @param  string  $key
+     * @param  string  $group
      * @param $value
      * @return Model
+     *
      * @author JalalLinuX
      */
     public function setSetting(string $key, $value, string $group = Setting::DEFAULT_GROUP): Model
@@ -29,16 +31,18 @@ trait HasSetting
 
     /**
      * Fetch setting of model
-     * @param string|null $key
-     * @param string $group
+     *
+     * @param  string|null  $key
+     * @param  string  $group
      * @return ?Setting|Collection
+     *
      * @author JalalLinuX
      */
     public function getSetting(string $key = null, string $group = Setting::DEFAULT_GROUP)
     {
         $setting = \setting()->entity($this)->group($group);
 
-        if (!is_null($key)) {
+        if (! is_null($key)) {
             return $setting->first($key);
         }
 
@@ -47,11 +51,14 @@ trait HasSetting
 
     /**
      * Set model setting
-     * @param string $key
-     * @param string $group
+     *
+     * @param  string  $key
+     * @param  string  $group
      * @param $value
      * @return Model
+     *
      * @throws Throwable
+     *
      * @author JalalLinuX
      */
     public static function setModelSetting(string $key, $value, string $group = Setting::DEFAULT_GROUP): Model
@@ -65,10 +72,13 @@ trait HasSetting
 
     /**
      * Get model setting
-     * @param string $key
-     * @param string $group
+     *
+     * @param  string  $key
+     * @param  string  $group
      * @return Setting|null
+     *
      * @throws Throwable
+     *
      * @author JalalLinuX
      */
     public static function getModelSetting(string $key, string $group = Setting::DEFAULT_GROUP): ?Setting
@@ -80,7 +90,9 @@ trait HasSetting
 
     /**
      * Relation with setting model
+     *
      * @return MorphMany
+     *
      * @author JalalLinuX
      */
     public function settings(): MorphMany
