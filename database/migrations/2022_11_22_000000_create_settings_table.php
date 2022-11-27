@@ -19,9 +19,9 @@ class CreateSettingsTable extends Migration
             $table->string('key')->index();
 
             // Nullable morph with dynamic entity id
-            $table->string("entity_type")->nullable();
-            $table->string("entity_id")->nullable();
-            $table->index(["entity_type", "entity_id"]);
+            $table->string('entity_type')->nullable();
+            $table->string('entity_id')->nullable();
+            $table->index(['entity_type', 'entity_id']);
 
             $table->text('value')->nullable();
             $table->json('validations')->nullable();
