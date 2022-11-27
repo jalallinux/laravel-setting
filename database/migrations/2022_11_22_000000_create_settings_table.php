@@ -24,7 +24,6 @@ class CreateSettingsTable extends Migration
             $table->index(['entity_type', 'entity_id']);
 
             $table->text('value')->nullable();
-            $table->json('validations')->nullable();
             $table->timestamps();
 
             $table->unique(\JalalLinuX\Setting\Models\Setting::UNIQUE_COLUMNS);
