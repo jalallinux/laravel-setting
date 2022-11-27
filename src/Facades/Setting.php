@@ -10,7 +10,7 @@ use JalalLinuX\Setting\Services\SettingService;
 
 /**
  * @see SettingService
- * 
+ *
  * @method self group(string $group = null)
  * @method self system()
  * @method self entity(Model $entity)
