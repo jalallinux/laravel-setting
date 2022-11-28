@@ -3,7 +3,6 @@
 namespace JalalLinuX\Setting\Services;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Collection;
 use JalalLinuX\Setting\Models\Setting;
 
 interface ISettingStorage
@@ -59,7 +58,7 @@ interface ISettingStorage
      * }}
      * @author JalalLinuX
      */
-    public function fetch(): Collection;
+    public function fetch(): array;
 
     /**
      * Get single setting of key or multiple without key
