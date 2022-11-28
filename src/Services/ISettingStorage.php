@@ -49,13 +49,19 @@ interface ISettingStorage
     /**
      * Fetch list of setting with current attributes/config
      *
-     * @return Collection
+     * @return array{array{
+     *      group: string,
+     *      key: string,
+     *      entity_id: string,
+     *      entity_type: string,
+     *      value: mixed
+     * }}
      * @author JalalLinuX
      */
-    public function fetch(): Collection;
+    public function fetch(): array;
 
     /**
-     * Get single setting of key or multiple without key
+     * Get value of specific setting
      *
      * @param string $key
      * @param bool $throw
@@ -75,5 +81,4 @@ interface ISettingStorage
      * @author JalalLinuX
      */
     public function set(string $key, $value): Setting;
-
 }

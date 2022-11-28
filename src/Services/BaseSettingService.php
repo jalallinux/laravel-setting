@@ -8,7 +8,7 @@ use JalalLinuX\Setting\Models\Setting;
 
 abstract class BaseSettingService implements ISettingStorage
 {
-    protected array $attributes = [
+    private array $attributes = [
         'group' => Setting::DEFAULT_GROUP
     ];
 
@@ -46,8 +46,18 @@ abstract class BaseSettingService implements ISettingStorage
         return $this;
     }
 
-    protected function getAttributes(): Collection
+    protected function getAttributes(string $key = null)
     {
-        return collect($this->attributes);
+        if (is_null($key)) {
+            return collect($this->attributes);
+        }
+
+        return collect($this->attributes)->get($key);
+    }
+
+    protected function setAttribute(string $key, $value): self
+    {
+        $this->attributes[$key] = $value;
+        return $this;
     }
 }

@@ -3,7 +3,6 @@
 namespace JalalLinuX\Setting\Services;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Collection;
 use JalalLinuX\Setting\Models\Setting;
 
 class SettingService extends BaseSettingService
@@ -15,17 +14,22 @@ class SettingService extends BaseSettingService
         $this->query = Setting::query();
     }
 
+    public function fetch(): array
+    {
+        return $this->makeQuery()->get(['group', 'key', 'entity_id', 'entity_type', 'value'])->toArray();
+    }
+
     public function get(string $key, bool $throw = false): mixed
     {
-        $this->attributes['key'] = $key;
+        $this->setAttribute('key', $key);
 
         return @$this->makeQuery()->{$throw ? 'firstOrFail' : 'first'}()->value;
     }
 
     public function set(string $key, $value): Setting
     {
-        $this->attributes['key'] = $key;
-        $this->attributes['value'] = $value;
+        $this->setAttribute('key', $key);
+        $this->setAttribute('value', $value);
 
         return $this->query->updateOrCreate(
             $this->getAttributes()->only(Setting::UNIQUE_COLUMNS)->toArray(),
@@ -42,11 +46,6 @@ class SettingService extends BaseSettingService
         }
 
         return $this->query;
-    }
-
-    public function fetch(): Collection
-    {
-        return $this->makeQuery()->get();
     }
 
     public function getValue(string $key, $default = null): mixed
