@@ -11,9 +11,9 @@ interface ISettingStorage
     /**
      * Set setting group
      *
-     * @param string|null $group
-     *
+     * @param  string|null  $group
      * @return self
+     *
      * @author JalalLinuX
      */
     public function group(string $group = null): self;
@@ -22,6 +22,7 @@ interface ISettingStorage
      * Set setting systematic
      *
      * @return self
+     *
      * @author JalalLinuX
      */
     public function system(): self;
@@ -29,9 +30,9 @@ interface ISettingStorage
     /**
      * Set setting entity
      *
-     * @param Model $entity
-     *
+     * @param  Model  $entity
      * @return self
+     *
      * @author JalalLinuX
      */
     public function entity(Model $entity): self;
@@ -39,9 +40,9 @@ interface ISettingStorage
     /**
      * Set setting model
      *
-     * @param string $class
-     *
+     * @param  string  $class
      * @return self
+     *
      * @author JalalLinuX
      */
     public function model(string $class): self;
@@ -50,6 +51,7 @@ interface ISettingStorage
      * Fetch list of setting with current attributes/config
      *
      * @return Collection
+     *
      * @author JalalLinuX
      */
     public function fetch(): Collection;
@@ -57,10 +59,10 @@ interface ISettingStorage
     /**
      * Get single setting of key or multiple without key
      *
-     * @param string $key
-     * @param bool $throw
-     *
+     * @param  string  $key
+     * @param  bool  $throw
      * @return mixed
+     *
      * @author JalalLinuX
      */
     public function get(string $key, bool $throw = false): mixed;
@@ -68,12 +70,11 @@ interface ISettingStorage
     /**
      * Set new setting or update exists setting
      *
-     * @param string $key
+     * @param  string  $key
      * @param $value
-     *
      * @return Setting
+     *
      * @author JalalLinuX
      */
     public function set(string $key, $value): Setting;
-
 }

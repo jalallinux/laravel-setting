@@ -9,7 +9,7 @@ use JalalLinuX\Setting\Models\Setting;
 abstract class BaseSettingService implements ISettingStorage
 {
     protected array $attributes = [
-        'group' => Setting::DEFAULT_GROUP
+        'group' => Setting::DEFAULT_GROUP,
     ];
 
     public function group(string $group = null): self
@@ -36,7 +36,7 @@ abstract class BaseSettingService implements ISettingStorage
 
     public function model(string $class): self
     {
-        if (!class_exists($class)) {
+        if (! class_exists($class)) {
             throw new \Exception("Class or namespace \"{$class}\" does not exists");
         }
 
