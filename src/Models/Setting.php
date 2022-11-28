@@ -10,7 +10,7 @@ class Setting extends Model
 {
     public const UNIQUE_COLUMNS = ['key', 'group', 'entity_type', 'entity_id'];
 
-    public const DEFAULT_GROUP = 'group';
+    public const DEFAULT_GROUP = 'default';
 
     protected $guarded = ['updated_at', 'id'];
 

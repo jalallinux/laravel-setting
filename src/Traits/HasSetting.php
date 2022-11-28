@@ -43,10 +43,10 @@ trait HasSetting
         $setting = \setting()->entity($this)->group($group);
 
         if (! is_null($key)) {
-            return $setting->first($key);
+            return $setting->get($key);
         }
 
-        return $setting->get();
+        return $setting->all();
     }
 
     /**
@@ -85,7 +85,7 @@ trait HasSetting
     {
         $setting = \setting()->model(static::class)->group($group);
 
-        return $setting->first($key, true);
+        return $setting->get($key, true);
     }
 
     /**
