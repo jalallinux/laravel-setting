@@ -56,6 +56,7 @@ interface ISettingStorage
      *      entity_type: string,
      *      value: mixed
      * }}
+     *
      * @author JalalLinuX
      */
     public function fetch(): array;
@@ -81,5 +82,4 @@ interface ISettingStorage
      * @author JalalLinuX
      */
     public function set(string $key, $value): Setting;
-
 }

@@ -3,7 +3,6 @@
 namespace JalalLinuX\Setting\Services;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Collection;
 use JalalLinuX\Setting\Models\Setting;
 
 abstract class BaseSettingService implements ISettingStorage
@@ -58,6 +57,7 @@ abstract class BaseSettingService implements ISettingStorage
     protected function setAttribute(string $key, $value): self
     {
         $this->attributes[$key] = $value;
+
         return $this;
     }
 }
